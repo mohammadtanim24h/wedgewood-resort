@@ -36,3 +36,14 @@
     width: 100%;
     border-radius: 5px;
 }
+
+.switch-auth-method {
+    text-decoration: none;
+    color: #AB8A62;
+    font-family: sans-serif;
+}
+
+.switch-auth-method:hover {
+    color: #b87728;
+    text-decoration: underline;
+}
