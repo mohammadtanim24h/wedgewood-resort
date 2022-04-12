@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Login.css";
 import googleLogo from "../../images/google.svg";
 import useFirebase from "../../hooks/useFirebase";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
     useAuthState,
     useSignInWithEmailAndPassword,
@@ -13,7 +13,8 @@ import auth from "../../firebase.init";
 const Login = () => {
     const { handleGoogleLogin } = useFirebase();
     const [user] = useAuthState(auth);
-    const [signInWithEmailAndPassword, userObj, , error] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, userObj, , error] =
+        useSignInWithEmailAndPassword(auth);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -25,10 +26,21 @@ const Login = () => {
         setPassword(e.target.value);
     };
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
+
     const handleLogin = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
-    }
+    };
+
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user, from, navigate])
+
     return (
         <div>
             {user ? (
