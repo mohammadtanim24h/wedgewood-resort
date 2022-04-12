@@ -26,7 +26,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="container mt-5 vh-100">
-                <h1 className="display-5 text-center room-title">Our Rooms</h1>
+                <h1 className="display-5 text-center section-title">Our Rooms</h1>
                 <div className="row g-5">
                     {rooms.map((room) => (
                         <Room room={room} key={room.id}></Room>
