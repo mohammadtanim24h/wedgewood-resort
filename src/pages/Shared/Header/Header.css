@@ -21,3 +21,20 @@ header nav a:hover {
     box-shadow: 1px 1px 5px gray;
     color: black;
 }
+
+.logout-btn {
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    color: rgb(45, 50, 56);
+    font-weight: 500;
+    transition: .2s;
+    padding: 11px 20px;
+    background-color: rgb(250, 247, 242);
+}
+
+.logout-btn:hover {
+    background-color: white;
+    box-shadow: 1px 1px 5px gray;
+    color: black;
+}

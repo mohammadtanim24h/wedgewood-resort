@@ -1,9 +1,11 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Login.css";
-import googleLogo from '../../images/google.svg';
+import googleLogo from "../../images/google.svg";
+import useFirebase from "../../hooks/useFirebase";
 
 const Login = () => {
+    const { handleGoogleLogin } = useFirebase();
     return (
         <div>
             <h2 className="section-title text-center display-6 mt-3">Login</h2>
@@ -27,14 +29,18 @@ const Login = () => {
                             Login
                         </Button>
                     </div>
-                    <hr  className="my-4"/>
-                    <div className="text-center">
-                        <button className="login-google">
-                            <img className="img-fluid me-2" src={googleLogo} alt="" />
-                            Continue with Google
-                        </button>
-                    </div>
+                    <hr className="my-4" />
                 </Form>
+                <div className="text-center">
+                    <button onClick={handleGoogleLogin} className="login-google">
+                        <img
+                            className="img-fluid me-2"
+                            src={googleLogo}
+                            alt="google"
+                        />
+                        Continue with Google
+                    </button>
+                </div>
             </div>
         </div>
     );
