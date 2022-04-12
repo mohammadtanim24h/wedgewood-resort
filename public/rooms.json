@@ -1,0 +1,26 @@
+[
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+      "name": "Single Room",
+      "price": 1200,
+      "img": "https://i.ibb.co/BVTP70t/single-room.jpg"
+    },
+    {
+      "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+      "name": "Double Room",
+      "price": 1960,
+      "img": "https://i.ibb.co/LC90GBn/double-room.jpg"
+    },
+    {
+      "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+      "name": "Family Room",
+      "price": 2450,
+      "img": "https://i.ibb.co/0tbgKS8/family-room.jpg"
+    },
+    {
+      "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+      "name": "Conference Room",
+      "price": 3290,
+      "img": "https://i.ibb.co/x1B98SN/conference-room.jpg"
+    }
+]
