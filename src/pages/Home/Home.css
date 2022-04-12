@@ -1,0 +1,29 @@
+.banner {
+    background-image: url('../../images/banner-hotel.jpg');
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-text {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+
+.banner-title {
+    color: white;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+.banner-text p {
+    line-height: 1.7rem;
+    letter-spacing: 1px;
+    color: white;
+}
